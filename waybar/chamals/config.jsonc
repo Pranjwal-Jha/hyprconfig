@@ -1,0 +1,238 @@
+// -*- mode: jsonc -*-
+{
+    "output": ["eDP-1", "HDMI-A-2"],
+    "layer": "top",
+    "spacing": 3, 
+    "modules-left": [
+        "hyprland/workspaces",
+        "idle_inhibitor",
+        "custom/hyprsunset",
+        "backlight",
+        "hyprland/window",
+    ],
+    "modules-center": [
+        "mpris",
+    ],
+    "modules-right": [
+        "network#speeddown",
+        "pulseaudio",
+        "battery",
+        "tray",
+        "clock",
+        "custom/notification"
+    ],
+    // Modules configuration
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "enable-bar-scroll": true,
+        "disable-scroll-wraparound": true,
+        "format": "{name}",
+        "persistent-workspaces": {
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+        },
+
+    },
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 30,
+        "all-outputs": true
+    },
+    "cava": {
+	//"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+	"framerate": 30,
+	"autosens": 1,
+	"bars": 14,
+	"lower_cutoff_freq": 50,
+	"higher_cutoff_freq": 10000,
+	"method": "pipewire",
+	"source": "auto",
+	"stereo": true,
+	"bar_delimiter": 0,
+	"noise_reduction": 0.77,
+	"input_delay": 2,
+        "hide_on_silence": true,
+	"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+	"actions": {
+	    "on-click-right": "mode"
+	}
+    },
+    "mpris": {
+ 	"format": "{status_icon}  {dynamic}  󰎆",
+        "interval": 1,
+        "dynamic-len": 40,
+	"status-icons": {
+		"playing": "",
+		"paused": "",
+		"stopped": ""
+	},
+	"dynamic-order": ["title", "artist"],
+	"ignored-players": ["firefox"]
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 14,
+        "spacing": 10
+    },
+    "load": {
+        "format": " {}"
+    },
+    "clock": {
+        // "timezone": "Asia/Colombo",
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            "overcharge": 100,
+            "good": 90,
+            "warning": 25,
+            "critical": 15
+        },
+        "format": "{capacity}%  {icon}",
+        "format-charging": "{capacity}%  {icon}",
+        "format-plugged": "{capacity}%  {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": {
+            "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
+            "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋"],
+            "full": "󰁹"
+        }
+    },
+    "pulseaudio": {
+        "format": "{volume}%  {icon}",
+        "format-bluetooth": "{volume}%  {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "default": ["", "", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "alacritty --class wiremix -T wiremix -e wiremix",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) {icon} ",
+        "format-ethernet": "Ethernet  ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
+    },
+    "network#speedup": {
+        "interval": 3,
+        "format-wifi": "{bandwidthUpBytes} ",
+        "format-ethernet": "{bandwidthUpBytes} ",
+        "format-disconnected": "0B/s ",
+        "align": 1,
+    },
+    "network#speeddown": {
+        "interval": 3,
+        "format-wifi": "{bandwidthDownBytes} ",
+        "format-ethernet": "{bandwidthDownBytes} ",
+        "format-disconnected": "0B/s ",
+        "align": 1,
+    },
+    "custom/pacman": {
+        "format": "󰏔  {} Update(s)",
+        "interval": 3600,    
+        "exec": "checkupdates | wc -l",
+        "exec-if": "exit 0",
+    },
+    "custom/weather": {
+        "exec": "curl -s wttr.in/Colombo?format='%c%t'",
+        "interval": 3600,
+        "tooltip": false,
+    },
+    "cava": {
+        // for the cava support waybar needs to be build with cava enabled; or use waybar-cava aur package if on arch linux
+        // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 30,
+        "autosens": 1,
+        "bars": 12,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pipewire",
+        "source": "auto",
+        "stereo": true,
+        "bar_delimiter": 0,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+          "hide_on_silence": false,
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+              "on-click-right": "mode"
+        }
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+              "notification": "<span foreground='red'><sup></sup></span>",
+              "none": "",
+              "dnd-notification": "<span foreground='red'><sup></sup></span>",
+              "dnd-none": "",
+              "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+              "inhibited-none": "",
+              "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+              "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "custom/hyprsunset": {
+        "interval": "once",
+        "exec": "cat ~/.cache/hyprsunset.state 2>/dev/null | awk '{ print \"{\\\"alt\\\": \\\"\" $1 \"\\\"}\" }'",
+        "on-click": "~/.config/waybar/scripts/toggle-hyprsunset.sh",
+        "signal": 1, // SIGRTMIN+1
+        "return-type": "json",
+        "format": "{icon}",
+        "tooltip-format": "Blue light filter: {alt}",
+        "format-icons": {
+            "on": "󱩌",
+            "off": "󰛨"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+# Ignore EVERYTHING by default
+*
+
+# But NOT these dirs and their contents:
+!.gitignore
+!.bashrc
+!.zshrc
+
+# Your curated configs
+!.config/
+!nvim/
+!nvim/**
+!waybar/
+!waybar/**
+!btop/
+!btop/**
+!fastfetch/
+!fastfetch/**
+!lazygit/
+!lazygit/**
+!tmux/
+!tmux/**
+!hypr/
+!hypr/**
+# Optional extras (uncomment if used)
+# !.config/gtk-3.0/
+# !.config/gtk-3.0/**
+# !.config/gtk-4.0/
+# !.config/gtk-4.0/**
+
+# Tools like chezmoi might need:
+!.chezmoitemplates/
+!.chezmoi.toml
