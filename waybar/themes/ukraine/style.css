@@ -1,0 +1,89 @@
+* {
+  font-family: "CaskaydiaCove NFP", "Noto Sans", monospace;
+  font-weight: 800;
+  background-color: transparent;
+}
+
+#workspaces button {
+  margin: 4px;
+  padding: 0 4px;
+  color: rgba(224, 222, 244, 0.8);
+}
+
+#workspaces button.empty {
+  color: rgba(224, 222, 244, 0.4);
+}
+
+#workspaces button.active {
+  color: #f189ac;
+}
+
+#workspaces button:hover {
+  background: none;
+  border: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #f6c177;
+}
+
+#clock {
+  margin-left: 8px;
+  color: #e0def4;
+}
+
+#window {
+  color: #e0def4;
+}
+
+#mpris {
+  color: #e0def4;
+  padding-right: 8px;
+}
+
+#pulseaudio-slider slider {
+  min-height: 6px;
+  min-width: 6px;
+  opacity: 1;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  background-color: #e0def4;
+  border-radius: 0;
+}
+
+#pulseaudio-slider trough {
+  min-height: 4px;
+  min-width: 60px;
+  border-radius: 0px;
+  border: none;
+  background-color: rgba(224, 222, 244, 0.4);
+}
+
+#pulseaudio-slider highlight {
+  border: none;
+  min-width: 10px;
+  border-radius: 0;
+  background-color: #f189ac;
+}
+
+#tray menu {
+  background-color: #2a273f;
+  border-color: #f189ac;
+  border-width: 4px;
+  border-radius: 0;
+  box-shadow: none;
+  color: #e0def4;
+}
+
+#custom-next {
+  color: rgba(224, 222, 244, 0.8);
+}
+
+#custom-prev {
+  color: rgba(224, 222, 244, 0.8);
+}
+
+#pulseaudio {
+  color: #e0def4;
+  margin: 0 4px;
+}

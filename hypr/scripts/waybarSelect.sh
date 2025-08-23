@@ -9,6 +9,7 @@
 WAYBAR_THEME_DIR="$HOME/.config/waybar/themes"
 WAYBAR_CONFIG="$HOME/.config/waybar/config.jsonc"
 WAYBAR_CSS="$HOME/.config/waybar/style.css"
+WAYBAR_MOCHA="$HOME/.config/waybar/mocha.css"
 ROFI_THEME="$HOME/.config/rofi/applets/waybarSelect.rasi"
 
 main() {
@@ -17,7 +18,7 @@ main() {
     if [[ -n "$choice" ]]; then
         cp "$WAYBAR_THEME_DIR/$choice/config.jsonc" "$WAYBAR_CONFIG"
         cp "$WAYBAR_THEME_DIR/$choice/style.css" "$WAYBAR_CSS"
-        
+        cp "$WAYBAR_THEME_DIR/$choice/mocha.css" "$WAYBAR_MOCHA"
         # Restart Waybar
         pkill waybar
         sleep 0.5
