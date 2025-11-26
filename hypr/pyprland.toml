@@ -1,0 +1,11 @@
+[pyprland]
+plugins = [
+    "scratchpads",
+]
+
+[scratchpads.files]
+animation = "fromTop"
+command = "nautilus"
+class = "org.gnome.Nautilus"
+size = "55% 60%"
+position = "22% 20%"

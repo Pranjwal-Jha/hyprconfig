@@ -2,6 +2,7 @@
 @define-color flamingo #f2cdcd;
 @define-color pink #f5c2e7;
 @define-color mauve #cba6f7;
+@define-color beige #EDE8D0;
 @define-color red #f38ba8;
 @define-color maroon #eba0ac;
 @define-color peach #fab387;
@@ -24,3 +25,18 @@
 @define-color base #1e1e2e;
 @define-color mantle #181825;
 @define-color crust #11111b;
+
+/*GruvBox Dark*/
+@define-color bg3 #665c54;
+@define-color bg2 #504945;
+@define-color bg1 #3c3836;
+@define-color bg0 #282828;
+@define-color fg1 #ebdbb2;
+@define-color gblue #458588;
+@define-color gbluel #83a598;
+@define-color gaqua #689d6a;
+@define-color gaqual #8ec07c;
+@define-color gyellow #d79921;
+@define-color gyellowl #b57614;
+@define-color gpurplel #d3869b;
+@define-color gpurple #b16286;

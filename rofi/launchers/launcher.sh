@@ -6,11 +6,15 @@
 
 
 # Style-dir
-style_dir="$HOME/.config/rofi/launchers/styles"
+# style_dir="$HOME/.config/rofi/launchers/styles"
 
 # Style-theme
-style_theme='style-12'
+# style_theme='style-12'
 
 
 # Run
-pkill rofi || true && rofi -show drun -theme ${style_dir}/${style_theme}.rasi
+# pkill rofi || true && rofi -show drun -theme ${style_dir}/${style_theme}.rasi
+
+theme="$HOME/.config/rofi/config.rasi"
+# Run Rofi
+pkill rofi || true && rofi -show drun -theme "${theme}"

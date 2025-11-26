@@ -1,0 +1,107 @@
+configuration {
+    modi:                        "drun";
+    show-icons:                  false;
+    drun-display-format:         "{name}";
+    separator-style:             "none";
+}
+@import "~/.config/rofi/applets/shared/colors.rasi"
+@import "~/.config/rofi/applets/shared/fonts.rasi"
+
+* {
+    background:                  #1E1E2E;
+    background-alt:              #28283D;
+    foreground:                  #CDD6F4;
+    selected:                    #89B4FA;
+    border-color:                #89B4FA;
+    
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
+window {
+    transparency:                "real";
+    background-color:            @background-color;
+    width:                       30%; 
+    height:                      70%;
+    location:                    center;
+    anchor:                      center;
+    x-offset:                    0;
+    y-offset:                    0;
+    children:                    ["mainbox" ];
+    spacing:                     10;
+    padding:                     0;
+}
+
+mainbox {
+    children:                    ["listview","inputbar"];
+    background-color:            transparent;
+    background-color:            @background;
+    border:                      1;
+    border-color:                @border-color;
+    spacing:                     10;
+    padding:                     10;
+    separator-style:             "none";
+}
+
+inputbar {
+    // children:                    [ "prompt", "entry" ];
+    background-color:            @background;
+    padding:                     5;
+    spacing:                     5;
+    border:                      1;
+    border-color:                @border-color;
+}
+
+prompt {
+    enabled:                     true;
+    content:                     "Filter >>";
+    background-color:            inherit;
+    text-color:                  @selected;
+    vertical-align:              0.5;
+}
+
+entry {
+    placeholder:                 "";
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    padding:                     4;
+}
+
+listview {
+    columns:                     1;
+    cycle:                       true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    background-color:            transparent;
+    spacing:                     5;
+    padding:                     5; 
+}
+
+element {
+    orientation:                 horizontal;
+    cursor:                      pointer;
+    padding:                     8;
+    border-radius:               0;
+}
+
+element-text {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+}
+
+element normal.normal {
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+}
+
+element alternate.normal {
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}

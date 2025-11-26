@@ -5,14 +5,15 @@
   "spacing": 3,
   "modules-left": [
     "hyprland/workspaces",
-    "idle_inhibitor",
+    // "idle_inhibitor",
     "custom/hyprsunset",
     "backlight",
     "hyprland/window",
   ],
-  "modules-center": ["mpris"],
+  // "modules-center": ["mpris"],
   "modules-right": [
-    "network#speeddown",
+    // "network#speeddown",
+    "mpris",
     "pulseaudio",
     "battery",
     "tray",
@@ -38,6 +39,10 @@
     "format": "{class}",
     "max-length": 30,
     "all-outputs": true,
+    "rewrite": {
+      "^.*\\.([a-z])(.*)$": "\\u$1$2",
+      "^.*\\.(.)(.*)$": "$1$2",
+    },
   },
   "cava": {
     //"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
@@ -111,7 +116,7 @@
     "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
   "battery": {
-    "bat": "BAT0",
+    "bat": "BAT1",
     "states": {
       "overcharge": 100,
       "good": 90,

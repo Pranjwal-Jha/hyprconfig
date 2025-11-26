@@ -10,7 +10,7 @@ window#waybar {
     font-family: "JetBrains Mono", "CaskaydiaCove NFP";
     border-bottom: 0px;
     /*background-color: @crust;*/
-    background-color: rgba(17, 17, 27, 0.5);
+    background-color: rgba(17, 17, 27, 0.7);
     color: @text;
     transition-property: background-color;
     transition-duration: 0s;
@@ -45,7 +45,7 @@ button {
 #workspaces button {
     padding: 0px 3px 0px 3px;
     background-color: transparent;
-    color: @lavender;
+    color: @gpurple;
     border-radius: 0;
 }
 
@@ -58,11 +58,11 @@ button {
 }
 
 #workspaces button:hover {
-    color: @peach;
+    color: @gaqual;
 }
 
 #workspaces button.active {
-    color: @peach;
+    color: @gaqual;
 }
 
 #idle_inhibitor,
@@ -82,8 +82,8 @@ button {
     padding: 0px 10px 0px 10px;
     border-radius: 0px;
     margin: 3px 0px 3px 0px;
-    background-color: @base;
-    color: @lavender;
+    background-color: @bg0;
+    color: @gblue;
 }
 
 #mode {
@@ -111,7 +111,7 @@ button {
 }
 
 #battery.overcharge {
-    color: @maroon;
+    color: @gpurple;
 }
 
 #battery.good {
@@ -149,8 +149,12 @@ label:focus {
 }
 
 #mpris.playing {
-    background-color: @base;
-    color: @lavender;
+    background-color: @bg0;
+    color: @gblue;
+}
+#mpris.paused{
+    background-color: @bg0;
+    color: @gaqua;
 }
 
 #tray menu {
