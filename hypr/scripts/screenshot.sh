@@ -104,10 +104,9 @@ shotactive() {
 }
 
 shotswappy() {
-	tmpfile=$(mktemp)
+	tmpfile="$dir/$file"
 	grim -g "$(slurp)" - >"$tmpfile" && "${sDIR}/sounds.sh" --screenshot && notify_view "swappy"
-	swappy -f - <"$tmpfile"
-	rm "$tmpfile"
+	swappy -f "$tmpfile"
 }
 
 
