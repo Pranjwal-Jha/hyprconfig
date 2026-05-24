@@ -3,7 +3,7 @@ plugins = [
     "scratchpads",
 ]
 
-[scratchpads.files]
+[scratchpads.Spotify]
 animation = ""
 command = "nautilus"
 class = "org.gnome.Nautilus"

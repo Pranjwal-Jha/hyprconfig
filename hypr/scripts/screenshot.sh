@@ -1,12 +1,4 @@
 #!/usr/bin/env bash
-#  ┏┓┏┓┳┓┏┓┏┓┳┓┏┓┓┏┏┓┏┳┓
-#  ┗┓┃ ┣┫┣ ┣ ┃┃┗┓┣┫┃┃ ┃ 
-#  ┗┛┗┛┛┗┗┛┗┛┛┗┗┛┛┗┗┛ ┻ 
-#                       
-
-
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# Screenshots scripts
 
 iDIR="$HOME/.config/swaync/icons"
 sDIR="$HOME/.config/hypr/scripts"
@@ -104,11 +96,12 @@ shotactive() {
 }
 
 shotswappy() {
-	tmpfile="$dir/$file"
-	grim -g "$(slurp)" - >"$tmpfile" && "${sDIR}/sounds.sh" --screenshot && notify_view "swappy"
+	tmpfile=$(mktemp /tmp/screenshot-XXXXXX.png)
+	grim -g "$(slurp)" - > "$tmpfile" || { rm -f "$tmpfile"; return 1; }
+	"${sDIR}/sounds.sh" --screenshot
 	swappy -f "$tmpfile"
+	rm -f "$tmpfile"
 }
-
 
 if [[ ! -d "$dir" ]]; then
 	mkdir -p "$dir"
