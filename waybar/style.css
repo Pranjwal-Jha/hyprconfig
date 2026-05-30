@@ -9,8 +9,7 @@
 window#waybar {
     font-family: "JetBrains Mono", "CaskaydiaCove NFP";
     border-bottom: 0px;
-    /*background-color: @crust;*/
-    background-color: rgba(17, 17, 27, 0.7);
+    background-color: @bar_bg;
     color: @text;
     transition-property: background-color;
     transition-duration: 0s;
@@ -40,6 +39,7 @@ button {
     background-color: @base;
     border-radius: 0px;
     margin: 3px 0px 3px 0px;
+    border: 1px solid @wb_border;
 }
 
 #workspaces button {
@@ -62,7 +62,8 @@ button {
 }
 
 #workspaces button.active {
-    color: @gaqual;
+    background-color: @text;
+    color: @base;
 }
 
 #idle_inhibitor,
@@ -84,6 +85,7 @@ button {
     margin: 3px 0px 3px 0px;
     background-color: @bg0;
     color: @gblue;
+    border: 1px solid @wb_border;
 }
 
 #mode {

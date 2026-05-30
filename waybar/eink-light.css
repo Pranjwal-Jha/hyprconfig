@@ -1,0 +1,49 @@
+/* E-Ink Light Paper */
+@define-color rosewater #b8a690;
+@define-color flamingo #a89580;
+@define-color pink #9a8872;
+@define-color mauve #6b5d4f;
+@define-color beige #d2c5aa;
+@define-color red #8b4049;
+@define-color maroon #7a3840;
+@define-color peach #8b6d4e;
+@define-color yellow #8a7542;
+@define-color green #5a6b4a;
+@define-color teal #4a6b60;
+@define-color sky #4a6670;
+@define-color sapphire #3d5f6a;
+@define-color blue #4a5f6a;
+@define-color lavender #6b6358;
+@define-color text #36312b;
+@define-color subtext1 #4a4339;
+@define-color subtext0 #5e554a;
+@define-color overlay2 #756a58;
+@define-color overlay1 #8a7e6b;
+@define-color overlay0 #a89b84;
+@define-color surface2 #c4b89e;
+@define-color surface1 #ccc0a6;
+@define-color surface0 #d2c5aa;
+@define-color base #d2c5aa;
+@define-color mantle #d2c5aa;
+@define-color crust #d2c5aa;
+
+/* E-Ink Accents — all dark ink tones */
+@define-color bg3 #c4b89e;
+@define-color bg2 #ccc0a6;
+@define-color bg1 #d2c5aa;
+@define-color bg0 #d2c5aa;
+@define-color fg1 #36312b;
+@define-color gblue #36312b;
+@define-color gbluel #4a4339;
+@define-color gaqua #36312b;
+@define-color gaqual #36312b;
+@define-color gyellow #5e554a;
+@define-color gyellowl #4a4339;
+@define-color gpurplel #4a4339;
+@define-color gpurple #36312b;
+
+/* Waybar background */
+@define-color bar_bg rgba(210, 197, 170, 0.85);
+
+/* Borders (visible in light mode) */
+@define-color wb_border @text;

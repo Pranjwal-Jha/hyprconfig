@@ -1,17 +1,17 @@
 @import "default"
 
 * {
-	bg: #2a273f;
-	cur: #2a273f;
-	fgd: #e0def4;
-	cmt: #6e6a86;
-	cya: #9ccfd8;
-	grn: #3e8fb0;
-	ora: #ea9a97;
-	pur: #c4a7e7;
-	red: #eb6f92;
-	yel: #f6c177;
-	pnk: #f189ac;
+	bg: #28231c;
+	cur: #28231c;
+	fgd: #d2c5aa;
+	cmt: #756a58;
+	cya: #7a9a9e;
+	grn: #7d8a6e;
+	ora: #b08968;
+	pur: #8a7968;
+	red: #a65d57;
+	yel: #c2a86c;
+	pnk: #b8a08a;
 
 	font: "JetBrains Mono 12";
 
@@ -32,7 +32,7 @@ configuration {
 }
 
 #window {
-    background-color: rgba(42, 39, 63, 0.8);
+    background-color: rgba(40, 35, 28, 0.8);
 	border:           2;
 	border-radius:    0px;
 	border-color:     @bordercolor;
@@ -70,19 +70,19 @@ configuration {
 }
 #element.normal.active {
 	background-color: @active-background;
-	text-color:       #232136;
+	text-color:       #1a1612;
 }
 #element.selected.normal {
 	background-color: @selected-background;
-	text-color:       #232136;
+	text-color:       #1a1612;
 }
 #element.selected.urgent {
 	background-color: @selected-urgent-background;
-	text-color:       #232136;
+	text-color:       #1a1612;
 }
 #element.selected.active {
 	background-color: @selected-active-background;
-	text-color: #232136;
+	text-color: #1a1612;
 	}
 #element.alternate.normal {
 	background-color: transparent;
